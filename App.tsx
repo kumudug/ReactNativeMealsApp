@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 // Installed this package using expo install expo-font to make sure to install the right version to match expo version
 import * as Font from 'expo-font'; 
 import { AppLoading } from 'expo'; // To prolong loading screen until fonts are loaded
+import MealsNavigator from './navigation/MealsNavigator';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -22,12 +23,13 @@ export default function App() {
       onError={(err) => console.log(err)} />
   }
 
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  // return (
+  //   <View style={styles.container}>
+  //     <Text>Open up App.tsx to start working on your app!</Text>
+  //     <StatusBar style="auto" />
+  //   </View>
+  // );
+  return <MealsNavigator />;
 }
 
 const styles = StyleSheet.create({

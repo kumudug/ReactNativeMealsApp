@@ -8,11 +8,14 @@ type AppProps = {
 
 const CategoriesScreen = (props: AppProps) => {
     console.log(props);
+    // Only top level (not nested) components get props.navigation automatically
     return (
         <View style={styles.screen}>
             <Text>Categories Screen!</Text>
             <Button title="Go to Meals" onPress={() => {
                 props.navigation.navigate({routeName: 'CategoryMeals'});
+                /*props.navigation.replace('CategoryMeals');
+                Replace can be used when navigating from login to main app*/
             }} />
         </View>
     );
